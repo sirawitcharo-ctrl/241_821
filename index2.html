@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container .item {
+        background-color: lightseagreen;
+    }
+    .button {
+        background-color: green;
+        color: white;
+        padding : 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button.warning {
+        background-color: blue;
+    }
+    .button.active {
+        background-color: red;
+    }
+    .item1 + .item2 {
+        background-color: turquoise;
+    }
+    input[type="text"] {
+        border: 2px solid orange;
+        margin-bottom: 10px;
+    }
+    .button2 {
+        background-color: rgb(240, 185, 5);
+        color: white;
+        padding : 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .button2:hover {
+        background-color: rgb(38, 27, 190);
+    }
+    .button2:active {
+        background-color: red;
+    }
+    .button2:focus {
+        background-color: aqua;
+    }
+    input:focus {
+        background-color: rgb(214, 34, 154);
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        Container Content
+        <div class="item">
+        Item Content
+        </div>
+    </div>
+    <div class="footer-container">
+        Container Content
+        <div class="item">
+            Item Content
+        </div>
+    </div>
+    <button class="button">Click Me</button>
+    <button class="button warning">Warning</button>
+    <button class="button active">Delete</button>
+    
+    <div class="item1">Item 1</div>
+    <div class="item2">Item 2</div>
+
+    <input type="text" name="sample-input">
+    <input type="text" name="another-input">
+    <input type="text" name="number-input">
+    <button class="button2">Click Me!</button>
+</body>
+</html>
