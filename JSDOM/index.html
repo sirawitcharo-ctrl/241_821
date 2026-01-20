@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    เพศ :
+    <input type="radio" name="gender" value="male" onchange="onchangeGender()"check = "true"> ชาย
+    <input type="radio" name="gender" value="female" onchange="onchangeGender()"> หญิง
+   <!-- <button oneclick="userClicked()">Submit</button> 
+    <div oneclick="devClick()">dev clicked</div> -->
+    <!-- งานอดิเรก :
+    <input type="checkbox" name="hobby" value="football"> Football 
+    <input type="checkbox" name="hobby" value="Basketball"> Basketball 
+    <input type="checkbox" name="hobby" value="Tennis"> Tennis -->
+    <!--ชื่อ : <input 
+       type=" text" 
+       name="fname" 
+       value="John">
+     นามสกุล : <input 
+       id = "lname"
+       class="input"
+       type="text"
+       name="lname" 
+       value="Doe"> -->
+    <script>
+        function onchangeGender(){
+        // เลือกgender ทุก input ออกมา
+        let genderInputs = document.querySelectorAll('input[name="gender"]');
+
+        //เช็คตัวไหน มี check อยู่ ให้เอา value มาแสดง
+         for(let i=0; i< genderInputs.lenght; i++) {
+            if (genderInputs[i].checked){
+                console.log("เพศที่เลือก "+ genderInputs[i].value);
+            }
+         }
+
+        }
+    /*
+        fuction onchangeGender(){
+            console.log('onchangeGender');
+        }
+    */
+      /*  function userClicked() {
+            console.log("User clicked the button!");
+        }
+        function devClick() {
+            console.log("Developer clicked the div!");
+        }
+    */
+    /*    let checkboxes = document.querySelectorALL('input[name="hobby"]')
+        for(let i = 0; i< checkboxes.length; i++) {
+            console.log(checkboxes[i].vaslue);
+        }
+    /*
+        const fnameInput = document.querySelector('input[name="fname"]')
+        console.log(fnameInput,value);
+        // select DOM
+        const fnameInput = document.getElementById("fname");
+        console.log(fnameInput.value);
+        const lnameInput = document.getElementById("lname");
+        console.log(lnameInput.value); 
+    */
+
+
+
+    </script>
+</body>
+</html>
