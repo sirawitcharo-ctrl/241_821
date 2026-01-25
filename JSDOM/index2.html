@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="checkbox" name="interest" value="กีฬา">กีฬา
+    <input type="checkbox" name="interest" value="ดนตรี">ดนตรี
+    <input type="checkbox" name="interest" value="อ่านหนังสือ">อ่านหนังสือ
+    <br><br>
+    <button onclick="submitInterest()">ส่งข้อมูล</button> 
+    <!---<div id = "hi">Hi <span stlye="Display: none;">A</span></dev>
+    --->
+    <!---
+    <button
+    onmouseover ="onmouseoverFname()"
+    onmouseup="onmouseupFname()"
+    onmousedown="onmouseupFname()"
+    >Click me</button>
+    --->
+    <!---
+    ชื่อ :
+    <input type="text" name="fname" onkeydown="onkeyFname()">
+    --->
+    <script>
+        function submitInterest() {
+            // ดึงข้อมูลจาก checkbox ที่ถูกเลือก
+            let checkboxes = document.querySelectorAll('input[name="interest"]');
+
+            //เอา value ของ checkboxที่ถูกเลือกออกมา
+            for (let i=0;i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                   // console.log(checkboxes[i].value); //แสดงค่าที่เลือกใน console
+                    contentHTML += '<li>' + checkboxes[i].value + '</li>';
+                }
+            }
+            //วนค่าที่เลือกใส่กลับไปที่HTML
+            contentHTML += '<ul>'
+                console.log(contentHTML)
+            //ใส่HTML ที่สร้างขึ้นใหม่ลงใน div id="content"
+            let contentdiv = document.getElementById('content');
+            contentDiv.innerHTML =contentHTML; 
+        }
+        /*
+        let hiDOM = document.getElementById("hi");
+        hiDOM.innerHTML ='Hello <b>A</b>';
+        console.log(hiDOM.textContent);
+        console.log(hiDOM.innerText);
+        console.log(hiDOM.innerHTML);
+        */
+        /*
+        //onmouseever คือเหตุการณ์ที่เกิดขึ้นเท่อเมาส์ไปขี้ที่องค์ประกอบ
+        function onmouseoverFname(){
+            console.log("Mouse is over the button");
+        }
+        function onmouseupFname(){
+            console.log("Mouse is up the button");
+        }
+        function onmousedownFname(){
+            console.log("Mouse down");
+        }
+        */
+        /*
+        // onkeydown คือ user กดปุ่มคีย์บอร์ดลงไป
+        //onkeyup คือ user ปล่อยปุ่มคีย์บอร์ด
+        function onkeyFname() {
+            let fname = document.querySelector('input[name="fname"]')
+        }
+        */
+    </script>
+</body>
+</html>
